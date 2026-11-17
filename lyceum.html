@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyceum of San Pedro</title>
+  <meta name="description" content="Lyceum of San Pedro - Explore academics, student services, admissions guidance, and school information." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>Welcome to Lyceum of San Pedro</div>
+      <div class="topbar-links">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Lyceum of San Pedro home">
+        <img src="Logo.png" alt="Lyceum of San Pedro Logo" class="brand-mark" />
+        <div>
+          <span>School of Excellence</span>
+          <strong>Lyceum of San Pedro</strong>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#programs">Academics</a>
+        <a href="#student-hub">Student Hub</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#student-hub" class="btn btn-light">Student Services</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">Nurturing Minds • Building Futures</div>
+          <h1>Where learning grows with purpose.</h1>
+          <p>
+            Lyceum of San Pedro is a vibrant school community committed to academic excellence,
+            innovation, and character development. We prepare students to lead confidently in a changing world.
+          </p>
+
+          <div class="cta-row">
+            <a href="#programs" class="btn btn-primary">Explore Programs</a>
+            <a href="#about" class="btn btn-light">Learn More</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <strong>25+</strong>
+              <span>Years of excellence</span>
+            </div>
+            <div class="stat-box">
+              <strong>1,800+</strong>
+              <span>Students</span>
+            </div>
+            <div class="stat-box">
+              <strong>98%</strong>
+              <span>Success rate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="School highlights">
+          <div class="mini-label">School Highlights</div>
+          <h3>Learning that inspires.</h3>
+          <ul class="feature-list">
+            <li>Strong academic foundation and leadership programs</li>
+            <li>Modern classrooms and co-curricular opportunities</li>
+            <li>Safe, inclusive, and supportive campus community</li>
+            <li>Guided by faith, service, and excellence</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student and Family Services -->
+    <section id="student-hub" class="student-hub">
+      <div class="container">
+        <div class="section-head">
+          <span>Student &amp; Family Services</span>
+          <h2>Helpful services for every step of your Lyceum journey.</h2>
+          <p>Explore inquiry guidance, a personalized service dashboard, appointment requests, and an admissions planning checklist.</p>
+        </div>
+
+        <div class="dashboard-panel">
+          <div class="dashboard-welcome">
+            <div>
+              <span class="dashboard-kicker">Your dashboard</span>
+              <h3 id="dashboard-greeting">Welcome to your school hub</h3>
+              <p id="dashboard-recommendation">Choose who you are to see helpful next steps.</p>
+            </div>
+            <label for="hub-profile">
+              I am a
+              <select id="hub-profile">
+                <option value="">Choose a profile</option>
+                <option value="applicant">Prospective applicant</option>
+                <option value="student">Current student</option>
+                <option value="parent">Parent or guardian</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="dashboard-widgets">
+            <article class="dashboard-widget">
+              <span class="widget-icon" aria-hidden="true">✦</span>
+              <h4>Announcements</h4>
+              <p>Check the school’s official channels for the latest notices and dates.</p>
+              <a href="#events">View school events</a>
+            </article>
+            <article class="dashboard-widget">
+              <span class="widget-icon" aria-hidden="true">✓</span>
+              <h4>Application progress</h4>
+              <p id="dashboard-progress">No checklist started yet.</p>
+              <a href="#admissions-planner">Open admissions checklist</a>
+            </article>
+            <article class="dashboard-widget">
+              <span class="widget-icon" aria-hidden="true">◷</span>
+              <h4>Appointments</h4>
+              <p id="dashboard-appointment">No appointment request in this session.</p>
+              <a href="#appointment-request">Request an appointment</a>
+            </article>
+            <article class="dashboard-widget">
+              <span class="widget-icon" aria-hidden="true">✉</span>
+              <h4>Inquiries</h4>
+              <p>Describe your question to get an office routing suggestion.</p>
+              <a href="#smart-inquiry">Start an inquiry</a>
+            </article>
+          </div>
+          <p class="prototype-note">Dashboard preview only. Live announcements, records, and appointment data are not connected.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-panel" id="smart-inquiry">
+            <div class="service-heading">
+              <span class="service-number">01</span>
+              <div>
+                <h3>Smart inquiry &amp; office routing</h3>
+                <p>Get an office suggestion based on the topic of your question.</p>
+              </div>
+            </div>
+            <form id="inquiry-routing-form">
+              <label>
+                What can we help you with?
+                <textarea id="inquiry-message" name="message" rows="4" placeholder="For example: I need a copy of my report card." required></textarea>
+              </label>
+              <div class="route-preview" id="route-preview" role="status" aria-live="polite">
+                Your suggested office will appear here as you type.
+              </div>
+              <button type="submit" class="btn btn-primary">Preview office routing</button>
+              <p class="form-note">This preview categorizes your message in this browser; it does not send it to an office.</p>
+            </form>
+          </article>
+
+          <article class="service-panel" id="appointment-request">
+            <div class="service-heading">
+              <span class="service-number">02</span>
+              <div>
+                <h3>Appointment request</h3>
+                <p>Choose an office and preferred schedule for a visit or consultation.</p>
+              </div>
+            </div>
+            <form id="appointment-form">
+              <div class="field-row">
+                <label>
+                  Office
+                  <select name="office" required>
+                    <option value="">Select an office</option>
+                    <option>Registrar</option>
+                    <option>Admissions</option>
+                    <option>Accounting</option>
+                    <option>Basic Education</option>
+                    <option>Senior High School</option>
+                    <option>College</option>
+                  </select>
+                </label>
+                <label>
+                  Preferred date
+                  <input type="date" name="date" required />
+                </label>
+              </div>
+              <div class="field-row">
+                <label>
+                  Preferred time
+                  <input type="time" name="time" required />
+                </label>
+                <label>
+                  Preferred personnel (optional)
+                  <input type="text" name="personnel" placeholder="Name, if known" />
+                </label>
+              </div>
+              <label>
+                Reason for appointment
+                <input type="text" name="reason" placeholder="Briefly describe what you need" required />
+              </label>
+              <button type="submit" class="btn btn-primary">Preview appointment request</button>
+              <p class="form-note" id="appointment-status" role="status" aria-live="polite">Requests are not sent or booked by this website preview.</p>
+            </form>
+          </article>
+
+          <article class="service-panel admissions-panel" id="admissions-planner">
+            <div class="service-heading">
+              <span class="service-number">03</span>
+              <div>
+                <h3>Smart admissions planner</h3>
+                <p>Identify your applicant type and keep track of your preparation steps.</p>
+              </div>
+            </div>
+            <label>
+              Applicant type
+              <select id="applicant-type">
+                <option value="">Choose applicant type</option>
+                <option>New student</option>
+                <option>Transferee</option>
+                <option>Returning student</option>
+                <option>College applicant</option>
+              </select>
+            </label>
+            <p class="admissions-guidance" id="admissions-guidance">Select an applicant type to begin your planning checklist.</p>
+            <div class="progress-label">
+              <span>Planning checklist</span>
+              <strong id="admissions-progress-label">0 of 4 complete</strong>
+            </div>
+            <progress id="admissions-progress" value="0" max="4" aria-label="Admissions planning checklist progress">0 of 4 complete</progress>
+            <div class="admissions-checklist">
+              <label><input type="checkbox" name="admissions-step" value="type"> I identified my applicant type</label>
+              <label><input type="checkbox" name="admissions-step" value="requirements"> I checked the current requirements with Admissions</label>
+              <label><input type="checkbox" name="admissions-step" value="documents"> I prepared the documents listed by the school</label>
+              <label><input type="checkbox" name="admissions-step" value="application"> I submitted my application through an official school channel</label>
+            </div>
+            <p class="form-note">Planning aid only—not an official application or verified application status. Requirements may vary; confirm them with Admissions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <span>About Us</span>
+          <h2>A school community built on character and achievement.</h2>
+          <p>We believe every learner deserves a place to thrive, discover their strengths, and grow with confidence.</p>
+        </div>
+
+        <div class="about-wrap">
+          <div class="about-photo" aria-label="School campus"></div>
+
+          <div class="about-copy">
+            <p>
+              Lyceum of San Pedro has become a trusted education partner for families who want more than
+              classroom instruction. We focus on developing critical thinking, creativity, leadership, and compassion.
+            </p>
+            <p>
+              Through engaging lessons, mentorship, and meaningful activities, students are encouraged to become
+              responsible citizens and future-ready professionals.
+            </p>
+
+            <div class="check-grid">
+              <div class="check-item">Holistic development</div>
+              <div class="check-item">Dedicated teachers</div>
+              <div class="check-item">Student success focus</div>
+              <div class="check-item">Community-centered values</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Programs Section -->
+    <section id="programs" class="programs">
+      <div class="container">
+        <div class="section-head">
+          <span>Academic Programs</span>
+          <h2>Programs that unlock every student's potential.</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="program-card">
+            <div class="image" aria-hidden="true"></div>
+            <div class="program-body">
+              <div class="label">Primary</div>
+              <h3>Elementary Learning</h3>
+              <p>Hands-on learning experiences that build confidence, curiosity, and foundational skills across all core subjects.</p>
+              <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="image" aria-hidden="true"></div>
+            <div class="program-body">
+              <div class="label">Secondary</div>
+              <h3>Junior & Senior High</h3>
+              <p>Balanced academics, leadership activities, and research-based instruction that prepare learners for college and life.</p>
+              <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <div class="image" aria-hidden="true"></div>
+            <div class="program-body">
+              <div class="label">Specialized</div>
+              <h3>STEM & Arts</h3>
+              <p>Career-focused programs in science, technology, arts, and communication designed to spark innovation and creativity.</p>
+              <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us">
+      <div class="container">
+        <div class="section-head">
+          <span>Why Choose Us</span>
+          <h2>Supporting students at every step of their journey.</h2>
+        </div>
+
+        <div class="reasons">
+          <article class="reason">
+            <div class="icon">A</div>
+            <h3>Academic Excellence</h3>
+            <p>Structured learning designed to strengthen understanding, confidence, and critical thinking.</p>
+          </article>
+
+          <article class="reason">
+            <div class="icon">L</div>
+            <h3>Life Skills</h3>
+            <p>Students gain communication, resilience, and leadership skills for future success.</p>
+          </article>
+
+          <article class="reason">
+            <div class="icon">C</div>
+            <h3>Character Formation</h3>
+            <p>We cultivate values such as kindness, responsibility, integrity, and service.</p>
+          </article>
+
+          <article class="reason">
+            <div class="icon">S</div>
+            <h3>Safe Environment</h3>
+            <p>A welcoming campus where every learner feels supported, respected, and secure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+      <div class="container">
+        <div class="section-head">
+          <span>Upcoming Events</span>
+          <h2>Opportunities to learn, celebrate, and lead.</h2>
+        </div>
+
+        <div class="event-grid">
+          <article class="event-card">
+            <div class="event-date">Feb 18</div>
+            <h3>Science Fair</h3>
+            <p>Students present innovative projects and discoveries in a vibrant showcase of creativity and research.</p>
+            <div class="meta">Campus Grounds • 8:00 AM</div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-date">Mar 06</div>
+            <h3>Leadership Summit</h3>
+            <p>Developing future leaders through workshops, team challenges, and student-centered mentorship.</p>
+            <div class="meta">Auditorium • 9:00 AM</div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-date">Apr 12</div>
+            <h3>Arts and Culture Week</h3>
+            <p>Celebrating creativity, heritage, and self-expression through performances, exhibits, and workshops.</p>
+            <div class="meta">Performing Arts Hall • 1:00 PM</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span>Testimonials</span>
+          <h2>Families and students share their experiences.</h2>
+        </div>
+
+        <div class="testimonial-wrap">
+          <article class="quote">
+            <p>“The faculty truly cares about my child’s growth. The school balances academic rigor with a very warm and encouraging environment.”</p>
+            <div class="person">
+              <div class="avatar">M</div>
+              <span>Maria D., Parent</span>
+            </div>
+          </article>
+
+          <article class="quote">
+            <p>“I learned how to lead with confidence here. The teachers challenge us to do our best and think beyond the classroom.”</p>
+            <div class="person">
+              <div class="avatar">R</div>
+              <span>Rafael S., Student</span>
+            </div>
+          </article>
+
+          <article class="quote">
+            <p>“I appreciate the strong values and opportunities for student growth. Lyceum helps students become well-rounded and prepared.”</p>
+            <div class="person">
+              <div class="avatar">A</div>
+              <span>Angela T., Alumna</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3>Ready to be part of our learning community?</h3>
+            <p>Enroll today and give your child a place to thrive.</p>
+          </div>
+          <a href="#contact-form" class="btn btn-light">Schedule a Visit</a>
+        </div>
+
+        <div class="contact-wrap" style="margin-top: 36px;">
+          <div class="contact-panel">
+            <h3>Get in touch</h3>
+            <p style="color: var(--muted); margin: 0;">We would love to welcome you to Lyceum of San Pedro.</p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Address</strong>
+                <span>123 San Pedro Avenue, School District, Philippines</span>
+              </div>
+              <div class="contact-item">
+                <strong>Phone</strong>
+                <span>(+63) 912 345 6789</span>
+              </div>
+              <div class="contact-item">
+                <strong>Email</strong>
+                <span>admissions@lyceum.edu.ph</span>
+              </div>
+              <div class="contact-item">
+                <strong>Office Hours</strong>
+                <span>Monday to Friday • 8:00 AM - 5:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact-form" class="contact-form">
+            <h3>Send a message</h3>
+            <form>
+              <div class="field-row">
+                <label>
+                  First Name
+                  <input type="text" name="firstName" placeholder="Juan" />
+                </label>
+                <label>
+                  Last Name
+                  <input type="text" name="lastName" placeholder="Dela Cruz" />
+                </label>
+              </div>
+
+              <label>
+                Email Address
+                <input type="email" name="email" placeholder="your@email.com" />
+              </label>
+
+              <label>
+                Message
+                <textarea name="message" placeholder="Tell us how we can help you."></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="school-map">
+          <div class="school-map-heading">
+            <div>
+              <h3>Find our school</h3>
+              <p>Explore the area around Lyceum of San Pedro on the map.</p>
+            </div>
+            <a
+              class="map-link"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Lyceum+of+San+Pedro%2C+San+Pedro%2C+Laguna%2C+Philippines"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Open in Google Maps</a>
+          </div>
+          <iframe
+            class="school-map-frame"
+            title="Interactive map showing Lyceum of San Pedro in San Pedro, Laguna"
+            src="https://maps.google.com/maps?q=Lyceum%20of%20San%20Pedro%2C%20San%20Pedro%2C%20Laguna%2C%20Philippines&amp;z=14&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      &copy; <span id="year"></span> Lyceum of San Pedro. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('#contact-form form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('This website preview does not send messages. Please contact the school through its official channels.');
+      this.reset();
+    });
+
+    const profileSelect = document.getElementById('hub-profile');
+    const dashboardGreeting = document.getElementById('dashboard-greeting');
+    const dashboardRecommendation = document.getElementById('dashboard-recommendation');
+    const profileContent = {
+      applicant: {
+        greeting: 'Welcome, future Lycean!',
+        recommendation: 'Start with the admissions planning checklist and explore academic programs.'
+      },
+      student: {
+        greeting: 'Welcome back, Lycean!',
+        recommendation: 'Use the inquiry guide to find the right office for your student-service question.'
+      },
+      parent: {
+        greeting: 'Welcome, Lyceum family!',
+        recommendation: 'Request an appointment or check the school’s official channels for current notices.'
+      }
+    };
+
+    profileSelect.addEventListener('change', function () {
+      const content = profileContent[this.value];
+      dashboardGreeting.textContent = content ? content.greeting : 'Welcome to your school hub';
+      dashboardRecommendation.textContent = content
+        ? content.recommendation
+        : 'Choose who you are to see helpful next steps.';
+    });
+
+    const inquiryForm = document.getElementById('inquiry-routing-form');
+    const inquiryMessage = document.getElementById('inquiry-message');
+    const routePreview = document.getElementById('route-preview');
+    const officeRoutes = [
+      { office: 'Admissions', keywords: ['admission', 'application', 'enroll', 'enrollment', 'requirement'] },
+      { office: 'Accounting', keywords: ['payment', 'tuition', 'fee', 'fees', 'balance', 'receipt'] },
+      { office: 'Registrar', keywords: ['transcript', 'record', 'records', 'certificate', 'report card', 'grade'] },
+      { office: 'Basic Education', keywords: ['elementary', 'basic education', 'junior high'] },
+      { office: 'Senior High School', keywords: ['senior high', 'shs', 'strand'] },
+      { office: 'College', keywords: ['college', 'degree', 'tertiary'] }
+    ];
+
+    function suggestOffice(message) {
+      const normalizedMessage = message.toLowerCase();
+      const route = officeRoutes.find(function (item) {
+        return item.keywords.some(function (keyword) {
+          return normalizedMessage.includes(keyword);
+        });
+      });
+      return route ? route.office : 'General School Office';
+    }
+
+    inquiryMessage.addEventListener('input', function () {
+      const message = this.value.trim();
+      routePreview.textContent = message
+        ? 'Suggested office: ' + suggestOffice(message)
+        : 'Your suggested office will appear here as you type.';
+    });
+
+    inquiryForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      routePreview.textContent = 'Routing preview: ' + suggestOffice(inquiryMessage.value.trim()) +
+        '. This inquiry has not been sent to the office.';
+    });
+
+    const appointmentForm = document.getElementById('appointment-form');
+    const appointmentStatus = document.getElementById('appointment-status');
+    const dashboardAppointment = document.getElementById('dashboard-appointment');
+    appointmentForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const formData = new FormData(appointmentForm);
+      const office = formData.get('office');
+      const date = formData.get('date');
+      const time = formData.get('time');
+      dashboardAppointment.textContent = office + ' • ' + date + ' at ' + time;
+      appointmentStatus.textContent = 'Preview only: your ' + office +
+        ' appointment request for ' + date + ' at ' + time +
+        ' was not sent or booked. Contact the school to confirm availability.';
+      appointmentForm.reset();
+    });
+
+    const applicantType = document.getElementById('applicant-type');
+    const admissionsGuidance = document.getElementById('admissions-guidance');
+    const admissionsSteps = Array.from(document.querySelectorAll('input[name="admissions-step"]'));
+    const admissionsProgress = document.getElementById('admissions-progress');
+    const admissionsProgressLabel = document.getElementById('admissions-progress-label');
+    const dashboardProgress = document.getElementById('dashboard-progress');
+
+    function updateAdmissionsProgress() {
+      const completed = admissionsSteps.filter(function (step) {
+        return step.checked;
+      }).length;
+      admissionsProgress.value = completed;
+      admissionsProgressLabel.textContent = completed + ' of ' + admissionsSteps.length + ' complete';
+      dashboardProgress.textContent = applicantType.value
+        ? completed + ' of ' + admissionsSteps.length + ' planning steps complete for ' + applicantType.value + '.'
+        : completed
+          ? completed + ' of ' + admissionsSteps.length + ' planning steps complete.'
+          : 'No checklist started yet.';
+    }
+
+    applicantType.addEventListener('change', function () {
+      admissionsSteps[0].checked = Boolean(this.value);
+      admissionsGuidance.textContent = this.value
+        ? 'Applicant type selected: ' + this.value + '. Ask Admissions for the official requirements for this applicant type.'
+        : 'Select an applicant type to begin your planning checklist.';
+      updateAdmissionsProgress();
+    });
+
+    admissionsSteps.forEach(function (step) {
+      step.addEventListener('change', updateAdmissionsProgress);
+    });
+
+  </script>
+</body>
+</html>
